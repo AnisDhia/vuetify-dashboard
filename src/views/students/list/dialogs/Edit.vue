@@ -1,10 +1,10 @@
 <template>
     <v-dialog v-model="dialog" max-width="500px">
-        <template v-slot:activator="{ on, attrs }">
+        <!-- <template v-slot:activator="{ on, attrs }">
             <v-icon small class="mr-2" v-bind="attrs" v-on="on">
                 mdi-pencil
             </v-icon>
-        </template>
+        </template> -->
         <v-card>
             <v-card-title>
                 <span class="text-h5"> Edit Item </span>
@@ -15,16 +15,20 @@
                     <v-form>
                         <v-row>
                             <v-col cols="12" sm="6" md="4">
-                                <v-text-field v-model="name" label="Full Name"></v-text-field>
+                                <v-text-field v-model="name" label="Full Name" :rules="nameRules"></v-text-field>
                             </v-col>
                             <v-col cols="12" sm="6" md="4">
-                                <v-text-field v-model="dateOfBirth" label="Date of Birth"></v-text-field>
+                                <v-text-field v-model="dateOfBirth" label="Date of Birth" :rules="dobRules"></v-text-field>
                             </v-col>
                             <v-col cols="12" sm="6" md="4">
-                                <v-text-field v-model="departement" label="Departement"></v-text-field>
+                                <v-text-field v-model="departement" label="Departement"
+                                    :rules="departementRules"></v-text-field>
                             </v-col>
                             <v-col cols="12" sm="6" md="4">
-                                <v-text-field v-model="faculty" label="Faculty"></v-text-field>
+                                <v-text-field v-model="email" label="Email" :rules="emailRules"></v-text-field>
+                            </v-col>
+                            <v-col cols="12" sm="6" md="4">
+                                <v-text-field v-model="phone" label="Phone Number" :rules="phoneRules"></v-text-field>
                             </v-col>
                         </v-row>
                     </v-form>
@@ -46,20 +50,25 @@
 
 <script>
 export default {
-    name: 'Dialog',
+    name: 'EditDialog',
     props: {
         student: {
             type: Object,
+            required: true
+        },
+        dialog: {
+            type: Boolean,
             required: true
         }
     },
     data() {
         return {
-            dialog: false,
+            // dialog: false,
             name: '',
             dateOfBirth: '',
             departement: '',
-            faculty: '',
+            email: '',
+            phone: '',
 
             nameRules: [
                 value => {
@@ -68,9 +77,9 @@ export default {
                     return 'Name is required.'
                 },
                 value => {
-                    if (value?.length <= 10) return true
+                    if (value?.length >= 3) return true
 
-                    return 'Name must be less than 10 characters.'
+                    return 'Name must more than 3 characters.'
                 },
             ],
             emailRules: [
@@ -92,12 +101,27 @@ export default {
                     return 'Number is requred.'
                 },
                 value => {
-                    if (/^[05|06|07]\d{8}$/.test(value)) return true
+                    if (/^0[5-6-7]\d{8}$/.test(value)) return true
 
                     return 'Invalid phone number.'
                 }
+            ],
+            dobRules: [
+                (v) => !!v || "Date of Birth is required",
+                (v) => /^\d{4}-\d{2}-\d{2}$/.test(v) || "Invalid Date of Birth format (yyyy-mm-dd)",
+            ],
+            departementRules: [
+                (v) => !!v || "Departement is required",
+                (v) => v.length > 5 || "Departement ame must be more than 5 characters."
             ]
         };
+    },
+    created() {  
+        this.name = this.student.name
+        this.dateOfBirth = this.student.dateOfBirth
+        this.departement = this.student.departement
+        this.email = this.student.email,
+            this.phone = this.student.phone
     },
     watch: {
         dialog(val) {
@@ -107,28 +131,23 @@ export default {
             this.name = this.student.name
             this.dateOfBirth = this.student.dateOfBirth
             this.departement = this.student.departement
-            this.faculty = this.student.faculty
-        },
-    },
-    created() {
-        this.name = this.student.name
-        this.dateOfBirth = this.student.dateOfBirth
-        this.departement = this.student.departement
-        this.faculty = this.student.faculty
+            this.email = this.student.email,
+                this.phone = this.student.phone
+        }
     },
     methods: {
         save() {
+            this.student.name = 'test'
             this.$emit('save', {
                 name: this.name,
                 dateOfBirth: this.dateOfBirth,
                 departement: this.departement,
-                faculty: this.faculty,
+                email: this.email,
+                phone: this.phone,
             })
-            this.close()
         },
         close() {
-            this.dialog = false
-            this.$emit('close')
+            this.$emit('close-edit')
         },
     },
 }

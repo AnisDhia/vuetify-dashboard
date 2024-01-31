@@ -1,11 +1,11 @@
 <template>
     <div>
-        <v-dialog v-model="dialogDelete" max-width="500px">
-            <template v-slot:activator="{ on, attrs }">
+        <v-dialog v-model="dialog" max-width="500px">
+            <!-- <template v-slot:activator="{ on, attrs }">
                 <v-icon small @click="deleteStudent" v-bind="attrs" v-on="on">
                     mdi-delete
                 </v-icon>
-            </template>
+            </template> -->
             <v-card>
                 <v-card-title class="text-h5">Are you sure you want to delete this item?</v-card-title>
                 <v-card-actions>
@@ -23,14 +23,14 @@
 export default {
     name: 'DeleteDialog',
     props: {
-        student: {
-            type: Object,
+        dialog: {
+            type: Boolean,
             required: true
         }
     },
     data() {
         return {
-            dialogDelete: false,
+            // dialogDelete: dialog,
             valid: false
         };
     },
@@ -38,11 +38,10 @@ export default {
         deleteItemConfirm() {
             // Delete the student data
             // You can emit an event or call an API to delete the student record
-            this.$emit('delete-student', this.student)
-            this.dialogDelete = false;
+            this.$emit('delete-student')
         },
         closeDelete() {
-            this.dialogDelete = false;
+            this.$emit('close-delete')
         }
     }
 };

@@ -13,20 +13,17 @@
                 </v-row>
             </v-col>
         </v-card-title>
-        <Delete :student="item" @delete-student="deleteStudent" />
+        <Edit :dialog="editDialog" :student="editedItem" @save="editStudent" @close-edit="closeEdit" />
+        <Delete :dialog="deleteDialog" @delete-student="deleteStudent" @close-delete="closeDelete" />
         <v-data-table :headers="headers" :items="students" item-key="name" class="elevation-1" :search="search"
             :custom-filter="filterOnlyCapsText">
             <template v-slot:item.actions="{ item }">
-                <v-icon small class="mr-2" @click="editStudent(item)">
+                <v-icon small class="mr-2" v-model="editDialog" @click="openEditDialog(item)">
                     mdi-pencil
                 </v-icon>
-                <v-icon small @click="deleteStudent(item)">
+                <v-icon small v-model="deleteDialog" @click="openDeleteDialog(item)">
                     mdi-delete
                 </v-icon>
-                <!-- <v-row>
-                    <Edit :student="item" @save="editStudent" />
-                    <Delete :student="item" @delete-student="deleteStudent" />
-                </v-row> -->
             </template>
         </v-data-table>
     </v-card>
@@ -46,6 +43,8 @@ export default {
     },
     data() {
         return {
+            editDialog: false,
+            deleteDialog: false,
             search: '',
             calories: '',
             students: [],
@@ -55,12 +54,14 @@ export default {
                 dateOfBirth: '',
                 departement: '',
                 email: '',
+                phone: ''
             },
             defaultItem: {
                 name: '',
                 dateOfBirth: '',
                 departement: '',
                 email: '',
+                phone: ''
             },
         }
     },
@@ -225,18 +226,46 @@ export default {
         addStudent(student) {
             this.students.push(student)
         },
-        editStudent(student) {
-            console.log(student)
-            console.log(index.of(student))
+        openEditDialog(student) {
             this.editedIndex = this.students.indexOf(student)
-            console.log(this.editedIndex)
             this.editedItem = Object.assign({}, student)
-            console.log(this.editedItem)
+            console.log('editedItem', this.editedItem, 'editedIndex', this.editedIndex)
+            this.editDialog = true
+        },
+        openDeleteDialog(student) {
+            this.editedIndex = this.students.indexOf(student)
+            this.editedItem = Object.assign({}, student)
+            this.deleteDialog = true
+        },
+        editStudent(student) {
+            if(this.editedIndex > -1) {
+                Object.assign(this.students[this.editedIndex], student)
+            } else {
+                this.students.push(student)
+            }
+            // this.editedIndex = this.students.indexOf(student)
+            // this.editedItem = Object.assign({}, student)
+
+            this.closeEdit()
+        },
+        deleteStudent() {
+            this.students.splice(this.editedIndex, 1)
+            this.closeDelete()
+        },
+        closeDelete() {
+            this.deleteDialog = false
+            this.$nextTick(() => {
+                this.editedItem = Object.assign({}, this.defaultItem)
+                this.editedIndex = -1
+            })
 
         },
-        deleteStudent(item) {
-            const index = this.students.indexOf(item)
-            this.students.splice(index, 1)
+        closeEdit() {
+            this.editDialog = false
+            this.$nextTick(() => {
+                this.editedItem = Object.assign({}, this.defaultItem)
+                this.editedIndex = -1
+            })
         },
     },
 }
