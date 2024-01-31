@@ -38,7 +38,7 @@ export default {
         deleteItemConfirm() {
             // Delete the student data
             // You can emit an event or call an API to delete the student record
-            this.$emit('delete-student')
+            this.$emit('delete-teacher')
         },
         closeDelete() {
             this.$emit('close-delete')

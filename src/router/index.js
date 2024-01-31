@@ -2,6 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import DashboardView from '../views/DashboardView.vue'
 import StudentsView from '../views/students/index.vue'
+import TeachersView from '../views/teachers/index.vue'
+import GroupsView from '../views/groups/index.vue'
 
 Vue.use(VueRouter)
 
@@ -23,6 +25,16 @@ const routes = [
     path: '/students',
     name: 'students',
     component: StudentsView
+  },
+  {
+    path: '/teachers',
+    name: 'teachers',
+    component: TeachersView
+  },
+  {
+    path: '/groups',
+    name: 'groups',
+    component: GroupsView
   }
 ]
 

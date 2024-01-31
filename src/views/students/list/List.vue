@@ -2,7 +2,7 @@
     <v-card>
         <v-card-title>
             <v-col>
-                <h1 class="display-1">Students</h1>
+                <h1 class="display-1">Students</h1>   
                 <v-row>
                     <v-text-field v-model="search" label="Search" single-line hide-details></v-text-field>
                     <v-spacer></v-spacer>
@@ -229,7 +229,6 @@ export default {
         openEditDialog(student) {
             this.editedIndex = this.students.indexOf(student)
             this.editedItem = Object.assign({}, student)
-            console.log('editedItem', this.editedItem, 'editedIndex', this.editedIndex)
             this.editDialog = true
         },
         openDeleteDialog(student) {

@@ -30,9 +30,27 @@
                 </v-list-item>
                 <v-list-item link to="/students">
                     <v-list-item-icon>
-                        <v-icon>mdi-format-list-bulleted</v-icon>
+                        <v-icon>mdi-school</v-icon>
                     </v-list-item-icon>
-                    <v-list-item-title>Tasks</v-list-item-title>
+                    <v-list-item-title>Students</v-list-item-title>
+                </v-list-item>
+                <v-list-item link to="/teachers">
+                    <v-list-item-icon>
+                        <v-icon>mdi-human-male-board</v-icon>
+                    </v-list-item-icon>
+                    <v-list-item-title>Teachers</v-list-item-title>
+                </v-list-item>
+                <v-list-item link to="/groups">
+                    <v-list-item-icon>
+                        <v-icon>mdi-account-group-outline</v-icon>
+                    </v-list-item-icon>
+                    <v-list-item-title>Groups</v-list-item-title>
+                </v-list-item>
+                <v-list-item link to="/settings">
+                    <v-list-item-icon>
+                        <v-icon>mdi-cog</v-icon>
+                    </v-list-item-icon>
+                    <v-list-item-title>Settings</v-list-item-title>
                 </v-list-item>
                 <v-list-item link to="/about">
                     <v-list-item-icon>

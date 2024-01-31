@@ -13,7 +13,7 @@
                                 <v-text-field v-model="name" label="Full Name" :rules="nameRules"></v-text-field>
                             </v-col>
                             <v-col cols="12" sm="6" md="4">
-                                <v-text-field v-model="dateOfBirth" label="Date of Birth" :rules="dobRules"></v-text-field>
+                                <v-text-field v-model="specialty" label="Date of Birth" :rules="dobRules"></v-text-field>
                             </v-col>
                             <v-col cols="12" sm="6" md="4">
                                 <v-text-field v-model="departement" label="Departement"
@@ -47,7 +47,7 @@
 export default {
     name: 'EditDialog',
     props: {
-        student: {
+        teacher: {
             type: Object,
             required: true
         },
@@ -60,7 +60,7 @@ export default {
         return {
             // dialog: false,
             name: '',
-            dateOfBirth: '',
+            specialty: '',
             departement: '',
             email: '',
             phone: '',
@@ -112,30 +112,30 @@ export default {
         };
     },
     created() {  
-        this.name = this.student.name
-        this.dateOfBirth = this.student.dateOfBirth
-        this.departement = this.student.departement
-        this.email = this.student.email,
-            this.phone = this.student.phone
+        this.name = this.teacher.name
+        this.specialty = this.teacher.specialty
+        this.departement = this.teacher.departement
+        this.email = this.teacher.email,
+            this.phone = this.teacher.phone
     },
     watch: {
         dialog(val) {
             val || this.close()
         },
-        student() {
-            this.name = this.student.name
-            this.dateOfBirth = this.student.dateOfBirth
-            this.departement = this.student.departement
-            this.email = this.student.email,
-                this.phone = this.student.phone
+        teacher() {
+            this.name = this.teacher.name
+            this.specialty = this.teacher.specialty
+            this.departement = this.teacher.departement
+            this.email = this.teacher.email,
+                this.phone = this.teacher.phone
         }
     },
     methods: {
         save() {
-            this.student.name = 'test'
+            this.teacher.name = 'test'
             this.$emit('save', {
                 name: this.name,
-                dateOfBirth: this.dateOfBirth,
+                specialty: this.specialty,
                 departement: this.departement,
                 email: this.email,
                 phone: this.phone,
