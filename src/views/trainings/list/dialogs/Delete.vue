@@ -7,7 +7,7 @@
                 </v-icon>
             </template> -->
             <v-card>
-                <v-card-title class="text-h5">Are you sure you want to delete this item?</v-card-title>
+                <v-card-title class="text-h5">Are you sure you want to delete this training?</v-card-title>
                 <v-card-actions>
                     <v-spacer></v-spacer>
                     <v-btn color="blue darken-1" text @click="closeDelete">Cancel</v-btn>
@@ -38,7 +38,7 @@ export default {
         deleteItemConfirm() {
             // Delete the student data
             // You can emit an event or call an API to delete the student record
-            this.$emit('delete-teacher')
+            this.$emit('delete-training')
         },
         closeDelete() {
             this.$emit('close-delete')

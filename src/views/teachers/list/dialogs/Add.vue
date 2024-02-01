@@ -107,6 +107,9 @@ export default {
             ]
         }
     },
+    created() {
+        console.log('created')
+    },
     methods: {
         onSubmit(e) {
             e.preventDefault()

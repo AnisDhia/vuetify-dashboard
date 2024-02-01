@@ -44,7 +44,7 @@
                     <v-list-item-icon>
                         <v-icon>mdi-account-group-outline</v-icon>
                     </v-list-item-icon>
-                    <v-list-item-title>Groups</v-list-item-title>
+                    <v-list-item-title>Trainings</v-list-item-title>
                 </v-list-item>
                 <v-list-item link to="/settings">
                     <v-list-item-icon>

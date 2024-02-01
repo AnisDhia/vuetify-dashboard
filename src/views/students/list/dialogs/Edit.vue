@@ -134,6 +134,7 @@ export default {
         save() {
             this.student.name = 'test'
             this.$emit('save', {
+                id: this.student.id,
                 name: this.name,
                 dateOfBirth: this.dateOfBirth,
                 departement: this.departement,

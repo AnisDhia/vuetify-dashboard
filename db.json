@@ -1,0 +1,372 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "name": "Student 1",
+      "dateOfBirth": "1991-01-01",
+      "departement": "Electrical Engineering",
+      "email": "example@mail.com",
+      "phone": "0699569850"
+    },
+    {
+      "id": "2",
+      "name": "Student 2",
+      "dateOfBirth": "1992-02-02",
+      "departement": "Mechanical Engineering",
+      "email": "example@mail.com",
+      "phone": "0699569858"
+    },
+    {
+      "id": "3",
+      "name": "Student 3",
+      "dateOfBirth": "1993-03-03",
+      "departement": "Civil Engineering",
+      "email": "example@mail.com",
+      "phone": "0699569858"
+    },
+    {
+      "id": "4",
+      "name": "Student 4",
+      "dateOfBirth": "1994-04-04",
+      "departement": "Computer Science",
+      "email": "example@mail.com",
+      "phone": "0699569858"
+    },
+    {
+      "id": "5",
+      "name": "Student 5",
+      "dateOfBirth": "1995-05-05",
+      "departement": "Electrical Engineering",
+      "email": "example@mail.com",
+      "phone": "0699569858"
+    },
+    {
+      "id": "6",
+      "name": "Student 6",
+      "dateOfBirth": "1996-06-06",
+      "departement": "Mechanical Engineering",
+      "email": "example@mail.com",
+      "phone": "0699569858"
+    },
+    {
+      "id": "7",
+      "name": "Student 7",
+      "dateOfBirth": "1997-07-07",
+      "departement": "Civil Engineering",
+      "email": "example@mail.com",
+      "phone": "0699569858"
+    },
+    {
+      "id": "8",
+      "name": "Student 8",
+      "dateOfBirth": "1998-08-08",
+      "departement": "Computer Science",
+      "email": "example@mail.com",
+      "phone": "0699569858"
+    },
+    {
+      "id": "9",
+      "name": "Student 9",
+      "dateOfBirth": "1999-09-09",
+      "departement": "Electrical Engineering",
+      "email": "example@mail.com",
+      "phone": "0699569858"
+    },
+    {
+      "id": "10",
+      "name": "Student 10",
+      "dateOfBirth": "2000-10-10",
+      "departement": "Mechanical Engineering",
+      "email": "example@mail.com",
+      "phone": "0699569858"
+    },
+    {
+      "id": "11",
+      "name": "Student 11",
+      "dateOfBirth": "2001-11-11",
+      "departement": "Civil Engineering",
+      "email": "example@mail.com",
+      "phone": "0699569858"
+    },
+    {
+      "id": "12",
+      "name": "Student 12",
+      "dateOfBirth": "2002-12-12",
+      "departement": "Computer Science",
+      "email": "example@mail.com",
+      "phone": "0699569858"
+    },
+    {
+      "id": "13",
+      "name": "Student 13",
+      "dateOfBirth": "2003-01-01",
+      "departement": "Electrical Engineering",
+      "email": "example@mail.com",
+      "phone": "0699569858"
+    },
+    {
+      "id": "14",
+      "name": "Student 14",
+      "dateOfBirth": "2004-01-01",
+      "departement": "Civil Engineering",
+      "email": "example@mail.com",
+      "phone": "0699569858"
+    },
+    {
+      "id": "e9f7",
+      "name": "Student 0",
+      "dateOfBirth": "1234-12-12",
+      "departement": "Engineering",
+      "email": "test@test.test",
+      "phone": "0632423422"
+    }
+  ],
+  "teachers": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "specialty": "Algorithms and Data Structures",
+      "departement": "Computer Science",
+      "email": "john.doe@example.com",
+      "phone": "0634567890"
+    },
+    {
+      "id": "2",
+      "name": "Alice Smith",
+      "specialty": "Machine Learning",
+      "departement": "Computer Science",
+      "email": "alice.smith@example.com",
+      "phone": "0645678901"
+    },
+    {
+      "id": "3",
+      "name": "Robert Johnson",
+      "specialty": "Databases",
+      "departement": "Information Systems",
+      "email": "robert.johnson@example.com",
+      "phone": "0656789012"
+    },
+    {
+      "id": "4",
+      "name": "Emily Brown",
+      "specialty": "Network Security",
+      "departement": "Cybersecurity",
+      "email": "emily.brown@example.com",
+      "phone": "0667890123"
+    },
+    {
+      "id": "5",
+      "name": "Michael Wilson",
+      "specialty": "Artificial Intelligence",
+      "departement": "Computer Science",
+      "email": "michael.wilson@example.com",
+      "phone": "0678901234"
+    },
+    {
+      "id": "6",
+      "name": "Sophia Davis",
+      "specialty": "Human-Computer Interaction",
+      "departement": "Information Systems",
+      "email": "sophia.davis@example.com",
+      "phone": "0689012345"
+    },
+    {
+      "id": "7",
+      "name": "James Miller",
+      "specialty": "Software Engineering",
+      "departement": "Computer Science",
+      "email": "james.miller@example.com",
+      "phone": "0690123456"
+    },
+    {
+      "id": "8",
+      "name": "Olivia Garcia",
+      "specialty": "Web Development",
+      "departement": "Computer Science",
+      "email": "olivia.garcia@example.com",
+      "phone": "0701234567"
+    },
+    {
+      "id": "9",
+      "name": "William Rodriguez",
+      "specialty": "Computer Graphics",
+      "departement": "Computer Science",
+      "email": "william.rodriguez@example.com",
+      "phone": "0712345678"
+    },
+    {
+      "id": "10",
+      "name": "Ava Martinez",
+      "specialty": "Data Science",
+      "departement": "Statistics",
+      "email": "ava.martinez@example.com",
+      "phone": "0723456789"
+    },
+    {
+      "id": "11",
+      "name": "Liam Brown",
+      "specialty": "Mobile App Development",
+      "departement": "Computer Science",
+      "email": "liam.brown@example.com",
+      "phone": "0734567890"
+    },
+    {
+      "id": "12",
+      "name": "Emma Davis",
+      "specialty": "Computer Vision",
+      "departement": "Computer Science",
+      "email": "emma.davis@example.com",
+      "phone": "0745678901"
+    },
+    {
+      "id": "13",
+      "name": "Noah Wilson",
+      "specialty": "Embedded Systems",
+      "departement": "Electrical Engineering",
+      "email": "noah.wilson@example.com",
+      "phone": "0756789012"
+    },
+    {
+      "id": "14",
+      "name": "Isabella Taylor",
+      "specialty": "Cryptography",
+      "departement": "Cybersecurity",
+      "email": "isabella.taylor@example.com",
+      "phone": "0767890123"
+    },
+    {
+      "id": "15",
+      "name": "Ethan Anderson",
+      "specialty": "Natural Language Processing",
+      "departement": "Linguistics",
+      "email": "ethan.anderson@example.com",
+      "phone": "0778901234"
+    },
+    {
+      "id": "16",
+      "name": "Sophie Miller",
+      "specialty": "Game Development",
+      "departement": "Computer Science",
+      "email": "sophie.miller@example.com",
+      "phone": "0789012345"
+    },
+    {
+      "id": "17",
+      "name": "Mason White",
+      "specialty": "Cloud Computing",
+      "departement": "Computer Science",
+      "email": "mason.white@example.com",
+      "phone": "0790123456"
+    },
+    {
+      "id": "18",
+      "name": "Amelia Harris",
+      "specialty": "Computer Networks",
+      "departement": "Computer Science",
+      "email": "amelia.harris@example.com",
+      "phone": "0801234567"
+    },
+    {
+      "id": "19",
+      "name": "Henry King",
+      "specialty": "Algorithmic Trading",
+      "departement": "Finance",
+      "email": "henry.king@example.com",
+      "phone": "0812345678"
+    },
+    {
+      "id": "20",
+      "name": "Scarlett Turner",
+      "specialty": "Quantum Computing",
+      "departement": "Physics",
+      "email": "scarlett.turner@example.com",
+      "phone": "0823456789"
+    }
+  ],
+  "trainings": [
+    {
+      "id": "94fe",
+      "name": "tra 1",
+      "teacher": {
+        "id": "1",
+        "name": "John Doe",
+        "specialty": "Algorithms and Data Structures",
+        "departement": "Computer Science",
+        "email": "john.doe@example.com",
+        "phone": "0634567890"
+      },
+      "students": [
+        {
+          "id": "2",
+          "name": "Student 2",
+          "dateOfBirth": "1992-02-02",
+          "departement": "Mechanical Engineering",
+          "email": "example@mail.com",
+          "phone": "0699569858"
+        },
+        {
+          "id": "1",
+          "name": "Student 1",
+          "dateOfBirth": "1991-01-01",
+          "departement": "Electrical Engineering",
+          "email": "example@mail.com",
+          "phone": "0699569850"
+        },
+        {
+          "id": "3",
+          "name": "Student 3",
+          "dateOfBirth": "1993-03-03",
+          "departement": "Civil Engineering",
+          "email": "example@mail.com",
+          "phone": "0699569858"
+        }
+      ]
+    },
+    {
+      "id": "af12",
+      "name": "tra 2",
+      "teacher": {
+        "id": "6",
+        "name": "Sophia Davis",
+        "specialty": "Human-Computer Interaction",
+        "departement": "Information Systems",
+        "email": "sophia.davis@example.com",
+        "phone": "0689012345"
+      },
+      "students": [
+        {
+          "id": "6",
+          "name": "Student 6",
+          "dateOfBirth": "1996-06-06",
+          "departement": "Mechanical Engineering",
+          "email": "example@mail.com",
+          "phone": "0699569858"
+        },
+        {
+          "id": "5",
+          "name": "Student 5",
+          "dateOfBirth": "1995-05-05",
+          "departement": "Electrical Engineering",
+          "email": "example@mail.com",
+          "phone": "0699569858"
+        },
+        {
+          "id": "1",
+          "name": "Student 1",
+          "dateOfBirth": "1991-01-01",
+          "departement": "Electrical Engineering",
+          "email": "example@mail.com",
+          "phone": "0699569850"
+        },
+        {
+          "id": "4",
+          "name": "Student 4",
+          "dateOfBirth": "1994-04-04",
+          "departement": "Computer Science",
+          "email": "example@mail.com",
+          "phone": "0699569858"
+        }
+      ]
+    }
+  ]
+}

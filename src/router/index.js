@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import DashboardView from '../views/DashboardView.vue'
 import StudentsView from '../views/students/index.vue'
 import TeachersView from '../views/teachers/index.vue'
-import GroupsView from '../views/groups/index.vue'
+import GroupsView from '../views/trainings/index.vue'
 
 Vue.use(VueRouter)
 
